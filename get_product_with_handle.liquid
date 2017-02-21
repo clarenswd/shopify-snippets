@@ -1,0 +1,15 @@
+/*
+snippet that search for TAGS that starts with js-contains-[HANDLE]
+get the product and starts showings its internal variables
+*/
+
+ <ul >
+  {% for handle_tag in product.tags %}
+
+    <li class="col-xs-10 col-sm-3 col-md-12">
+		{%capture handle_id%}{{handle_tag | replace: 'js-contains-', '' }}{%endcapture%}<br>
+		PRINT>>>>   {{ handle_id }}  <br>
+     	USE THE PRODUCTS {{all_products[handle_id].title}} <br>
+    </li>
+  {% endfor %}
+</ul>
